@@ -75,6 +75,8 @@ class Controller:
             test_set_obj = tests_set.TestsSet(test_set, self, self.filters)
             self.tlogger.test_set(f"Running test set: {test_set_obj.name}")
             test_set_obj.run()
+            for net in test_set_obj.networks:
+                net.destroy()
         self.failed = self.tlogger.end()
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
