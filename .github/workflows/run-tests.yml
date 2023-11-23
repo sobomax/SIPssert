@@ -16,7 +16,7 @@ jobs:
       uses: OpenSIPS/SIPssert/actions/Prepare_SIPssert@main
       with:
         sipssert-repo: ${{ github.repository }}
-        tests-repo: OpenSIPS/sipssert-opensips-tests
+        tests-repo: sobomax/sipssert-opensips-tests
 
     - name: Read and parse YAML file
       id: set-matrix
@@ -34,7 +34,7 @@ jobs:
       uses: OpenSIPS/SIPssert/actions/Prepare_SIPssert@main
       with:
         sipssert-repo: ${{ github.repository }}
-        tests-repo: OpenSIPS/sipssert-opensips-tests
+        tests-repo: sobomax/sipssert-opensips-tests
 
     - name: Run Test
       uses: ./sipssert/actions/Run_Test
